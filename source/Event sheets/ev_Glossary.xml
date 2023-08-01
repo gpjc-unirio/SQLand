@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ev_Glossary</name>
+    <events>
+        <event-block sid="447751729501718">
+            <conditions>
+                <condition id="17" name="On tap object" sid="937768271449283" type="Touch">
+                    <param id="0" name="Object">glossario</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="991889816143573">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="558534136636883" type="System">
+                            <param id="0" name="Layer">&quot;Glossary&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="952784438850679" type="glossario">
+                            <param id="0" name="Instance variable">Open</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="474905969972718">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="857077776497881" type="System">
+                            <param id="0" name="Layer">&quot;Glossary&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="239417239030512" type="glossario">
+                            <param id="0" name="Instance variable">Open</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="707580204578669">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="894144294453682" type="glossario">
+                    <param id="0" name="Instance variable">Open</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="494767726655095" type="System">
+                    <param id="0" name="Layer">&quot;Glossary&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="215112677195111" type="System">
+                    <param id="0" name="Variable">GlossarioAberto</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="242290002130151" type="TableSelect">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="309325085656846" type="TableSelectCreate">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="316742746755000" type="closeQuestionBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="202630182839979" type="QuestionBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="513578478552384" type="textBoxQuestion">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set visible" sid="998845364429969" type="textBoxQuest">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="756501876561804">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="418192983793836" type="glossario">
+                    <param id="0" name="Instance variable">Open</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="231914547765720" type="System">
+                    <param id="0" name="Layer">&quot;Glossary&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="549460102853104" type="System">
+                    <param id="0" name="Variable">GlossarioAberto</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="437377238878459">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="656337683362223" type="System">
+                            <param id="0" name="Variable">SQLAlter</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="876991224504105" type="TableSelect">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="153204251661160">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="156746328711683" type="System">
+                            <param id="0" name="Variable">SQLCreate</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="547839678166109" type="TableSelectCreate">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="678309138697349">
+            <conditions>
+                <condition id="14" name="On tap" sid="222450813702669" type="Touch" />
+                <condition id="-9" name="Layer is visible" sid="422704396312400" type="System">
+                    <param id="0" name="Layer">&quot;Glossary&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="871875761868392">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="334411039318921" type="Touch">
+                            <param id="0" name="Object">glossarioBG</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="993080878964973" type="Touch">
+                            <param id="0" name="Object">glossario</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="914082238464492" type="glossario">
+                            <param id="0" name="Instance variable">Open</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="114736425687123">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="527606764013389" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="161312982852061" type="AnterPag">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="890739365827057" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="480428463551629">
+            <conditions>
+                <condition id="-22" name="Else" sid="371658026084925" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="701474762619385" type="AnterPag">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Alterar quando achar o limite de pags</comment>
+        <event-block sid="241345558387990">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="453944132649015" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="812457803213595" type="ProxPag">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="465411510650679" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="493988362575636">
+            <conditions>
+                <condition id="-22" name="Else" sid="622340210726376" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="839000763806623" type="ProxPag">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="884705054435235">
+            <conditions>
+                <condition id="17" name="On tap object" sid="945303269035505" type="Touch">
+                    <param id="0" name="Object">ProxPag</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="256035260868057" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="160756960614823">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="798064470071214">
+            <conditions>
+                <condition id="17" name="On tap object" sid="545841469418515" type="Touch">
+                    <param id="0" name="Object">AnterPag</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="342840289637038" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="641713214007918">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="337025049721874" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="379629268430661" type="TitleGlossario">
+                    <param id="0" name="Text">&quot;TIPOS DE DADOS&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="867996912682073" type="TextoEsqGlossario">
+                    <param id="0" name="Text">&quot;Alfanuméricos&#x0D;&#x0A;&#x0D;&#x0A;• Char&#x0D;&#x0A;○ Usados para armazenar dados que serão sempre do mesmo tamanho&#x0D;&#x0A;&#x0D;&#x0A;• Varchar&#x0D;&#x0A;○ Usados para strings de tamanho variado&#x0D;&#x0A;&#x0D;&#x0A;• Text&#x0D;&#x0A;○ Contém uma string de caracteres não-Unicode com tamanho de até&#x0D;&#x0A;2.147.483.647 caracteres&#x0D;&#x0A;○ Não podem ser indexadas, pesquisadas, agrupadas ou ordenadas&#x0D;&#x0A;&quot;&#x0D;&#x0A;</param>
+                </action>
+                <action id="0" name="Set text" sid="149695209673967" type="TitleGlossario2">
+                    <param id="0" name="Text">&quot;TIPOS DE DADOS&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="528524057890762" type="TextoDirGlossario">
+                    <param id="0" name="Text">&quot;Numéricos&#x0D;&#x0A;&#x0D;&#x0A;• Float / Real&#x0D;&#x0A;○ Armazenamento de longos números em ponto-flutuante, com a precisão de&#x0D;&#x0A;até 15 dígitos em 8 bytes (Float) e 7 dígitos em 4 bytes (Real)&#x0D;&#x0A;&#x0D;&#x0A;• Integer &#x0D;&#x0A;○ Dados numérico inteiros, possui 4 bytes, entre os valores (-2³¹ (-2.147.483.648) e 2³¹-1 (2.147.483.647))&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262115735973870">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="417687441537055" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="567813510428540" type="TitleGlossario">
+                    <param id="0" name="Text">&quot;TIPOS DE DADOS&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="697791687041996" type="TextoEsqGlossario">
+                    <param id="0" name="Text">&quot;Booleanos&#x0D;&#x0A;&#x0D;&#x0A;• Boolean&#x0D;&#x0A;○ Armazenado na forma de bit 0/1, ou true/false (verdadeiro/falso). Não pode&#x0D;&#x0A;conter valores nulos&#x0D;&#x0A;&#x0D;&#x0A;Datas&#x0D;&#x0A;&#x0D;&#x0A;• Datetime&#x0D;&#x0A;○ Armazena a data e hora com precisão de milissegundos em 8 bytes&#x0D;&#x0A;&#x0D;&#x0A;• Date&#x0D;&#x0A;○ Armazena somente a parte da data, sem informação de hora, minutos, segundos&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="230560912290702" type="TitleGlossario2">
+                    <param id="0" name="Text">&quot;CONSTRAINTS&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="161079601215308" type="TextoDirGlossario">
+                    <param id="0" name="Text">&quot;Constraints em SQL são regras que impõem restrições nos dados armazenados em uma tabela. Algumas das principais constraints são:&#x0D;&#x0A;&#x0D;&#x0A;•NOT NULL: Impede que uma coluna tenha valores nulos.&#x0D;&#x0A;•UNIQUE: Garante que os valores em uma coluna sejam exclusivos.&#x0D;&#x0A;•PRIMARY KEY: Identifica exclusivamente cada registro em uma tabela, combinando as restrições NOT NULL e UNIQUE.&#x0D;&#x0A;•FOREIGN KEY: Estabelece uma relação entre tabelas, vinculando uma coluna em uma tabela à coluna correspondente em outra tabela. Garante a integridade referencial dos dados.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="766260162751568">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="271514921729486" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="671614002298169" type="TitleGlossario">
+                    <param id="0" name="Text">&quot;CREATE TABLE&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="693583470822896" type="TextoEsqGlossario">
+                    <param id="0" name="Text">&quot;A instrução CREATE TABLE é usada para criar uma nova tabela em um banco de dados.&#x0D;&#x0A;&#x0D;&#x0A;Sintaxe:&#x0D;&#x0A;CREATE TABLE nome_da_tabela (&#x0D;&#x0A;    tipo de dados coluna1,&#x0D;&#x0A;    tipo de dados coluna2,&#x0D;&#x0A;    tipo de dados coluna3,&#x0D;&#x0A;   ....&#x0D;&#x0A;);&#x0D;&#x0A;Os parâmetros da coluna especificam os nomes das colunas da tabela.&#x0D;&#x0A;&#x0D;&#x0A;O parâmetro datatype especifica o tipo de dados que a coluna pode conter (por exemplo, varchar, integer, date, etc.).&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="340003522096934" type="TitleGlossario2">
+                    <param id="0" name="Text">&quot;DROP TABLE&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="684604193314041" type="TextoDirGlossario">
+                    <param id="0" name="Text">&quot;A instrução DROP TABLE é usada para descartar uma tabela existente em um banco de dados.&#x0D;&#x0A;&#x0D;&#x0A;Sintaxe:&#x0D;&#x0A;DROP TABLE nome_da_tabela;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="289817907601950">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="350049478556347" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="500951408303089" type="TitleGlossario">
+                    <param id="0" name="Text">&quot;ALTER TABLE&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="477535345210221" type="TextoEsqGlossario">
+                    <param id="0" name="Text">&quot;A instrução ALTER TABLE é usada para adicionar, excluir ou modificar colunas em uma tabela existente.&#x0D;&#x0A;&#x0D;&#x0A;A instrução ALTER TABLE também é usada para adicionar e remover várias restrições em uma tabela existente.&#x0D;&#x0A;&#x0D;&#x0A;Para adicionar uma coluna em uma tabela, use a seguinte sintaxe:&#x0D;&#x0A;&#x0D;&#x0A;ALTER TABLE nome_da_tabela&#x0D;&#x0A;ADD tipo de dados nome_da_coluna;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="394168562327904" type="TitleGlossario2">
+                    <param id="0" name="Text">&quot;ALTER TABLE&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="195845279782909" type="TextoDirGlossario">
+                    <param id="0" name="Text">&quot;Para excluir uma coluna em uma tabela, use a seguinte sintaxe (observe que alguns sistemas de banco de dados não permitem a exclusão de uma coluna):&#x0D;&#x0A;&#x0D;&#x0A;ALTER TABLE nome_da_tabela&#x0D;&#x0A;DROP COLUMN nome_da_coluna;&#x0D;&#x0A;&#x0D;&#x0A;Para alterar o tipo de dados de uma coluna em uma tabela, use a seguinte sintaxe:&#x0D;&#x0A;&#x0D;&#x0A;ALTER TABLE nome_da_tabela&#x0D;&#x0A;MODIFY COLUMN nome_da_coluna tipo de dados;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="524061106257528">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="312542713481653" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="392360487452882" type="TitleGlossario">
+                    <param id="0" name="Text">&quot;INSERT INTO&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="610812910768615" type="TextoEsqGlossario">
+                    <param id="0" name="Text">&quot;A instrução INSERT INTO é usada para inserir novos registros em uma tabela.&#x0D;&#x0A;&#x0D;&#x0A;INSERT INTO Sintaxe&#x0D;&#x0A;É possível escrever a instrução INSERT INTO da seguinte maneira:&#x0D;&#x0A;&#x0D;&#x0A;INSERT INTO table_name (coluna1, coluna2, coluna3, ...)&#x0D;&#x0A;VALORES (valor1, valor2, valor3, ...);&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="763220639805895" type="TitleGlossario2">
+                    <param id="0" name="Text">&quot;UPDATE&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="707058984022357" type="TextoDirGlossario">
+                    <param id="0" name="Text">&quot;UPDATE é utilizado para modificar dados de uma ou múltiplas colunas de um ou mais registros existentes em uma tabela, que atendam à condição estabelecida pela cláusula WHERE. O comando segue a seguinte sintaxe:&#x0D;&#x0A;&#x0D;&#x0A;UPDATE [Nome da tabela]&#x0D;&#x0A;   SET [Nome da coluna 1] = [Valor 1],&#x0D;&#x0A;       [Nome da coluna 2] = [Valor 2],&#x0D;&#x0A;       ...&#x0D;&#x0A;   WHERE [Condição]&#x0D;&#x0A;;&#x0D;&#x0A;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="123346250053094">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="334372305708898" type="glossarioBG">
+                    <param id="0" name="Instance variable">Pagina</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="121760074710372" type="TitleGlossario">
+                    <param id="0" name="Text">&quot;DELETE&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="257579538025851" type="TextoEsqGlossario">
+                    <param id="0" name="Text">&quot;DELETE é utilizado para remover um ou mais registros, que atendam à condição estabelecida, de uma tabela. O comando segue a seguinte sintaxe:&#x0D;&#x0A;&#x0D;&#x0A;DELETE FROM [Nome da tabela]&#x0D;&#x0A;   WHERE [Condição]&#x0D;&#x0A;;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="612164756169575" type="TitleGlossario2">
+                    <param id="0" name="Text">&quot;SELECT&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="222613138000363" type="TextoDirGlossario">
+                    <param id="0" name="Text">&quot;SELECT é utilizado para consultar, selecionar dados de um banco de dados. Ao usá-lo em uma tabela, os dados são retornados e armazenados temporariamente em uma tabela resultante de saída. O comando pode se utilizar da wildcard * para apresentar todas as colunas de uma tabela, ou especificá-las, atendendo às seguintes sintaxes, respectivamente:&#x0D;&#x0A;SELECT *&#x0D;&#x0A;   FROM [Nome da tabela];&#x0D;&#x0A;&#x0D;&#x0A;SELECT [Nome da coluna 1], [Nome da coluna 2], ...&#x0D;&#x0A;   FROM [Nome da tabela];&#x0D;&#x0A;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ev_MainMenu</name>
+    <events>
+        <variable comment='Depois de clicar em &quot;Iniciar jogo&quot;, essa variável deve ficar diferente de zero' constant="0" name="jogoIniciado" sid="334337481493749" static="0" type="number">0</variable>
+        <variable constant="0" name="VolumeJogo" sid="637201139709418" static="0" type="number">-25</variable>
+        <event-block sid="472359113907874">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="265163058156981" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="329559139700111" type="versaoJogo">
+                    <param id="0" name="Text">&quot;Versão: &quot;&amp;projectversion</param>
+                </action>
+                <action id="33" name="Stop all" sid="801389148141636" type="Audio" />
+                <action id="3" name="Set value" sid="382174778501710" type="SliderBarVolume">
+                    <param id="0" name="Value">30 + VolumeJogo</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="182007214479101" type="System">
+                    <param id="0" name="Variable">VolumeJogo</param>
+                    <param id="1" name="Value">-25</param>
+                </action>
+                <action id="0" name="Play" sid="323833099966475" type="Audio">
+                    <param id="0" name="Audio file">DavidKBD_-_Tropical_Pack_-_09_-_Ukuleles_Melancholy_-_Acoustic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">VolumeJogo</param>
+                    <param id="1" name="Tag (optional)">&quot;musica&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="410373663745315">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="206232029891999" type="System" />
+                <condition id="-14" name="Compare variable" sid="363978355994497" type="System">
+                    <param id="0" name="Variable">jogoIniciado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="713089150938256" type="TittleGame">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="278895161758174" type="titleBg">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="325227034600846" type="opcoesVOlume">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="649161056098471">
+            <conditions>
+                <condition id="17" name="On tap object" sid="791703023446826" type="Touch">
+                    <param id="0" name="Object">IniciarJogow</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="147217730502571" type="System">
+                    <param id="0" name="Variable">jogoIniciado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="540904183324209" type="IniciarJogow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="772227626708579" type="titleBg_IniciarJogo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="569904445973045" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Add to" sid="238771504743705" type="System">
+                    <param id="0" name="Variable">jogoIniciado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="916896282079387" type="TittleGame">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="515121868321225" type="titleBg">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="483011383743798" type="opcoesVOlume">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="462582696803124">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="467766851634793" type="System" />
+                <condition id="-14" name="Compare variable" sid="110991709130491" type="System">
+                    <param id="0" name="Variable">jogoIniciado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="773786821342103" type="IniciarJogow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="960890120766460" type="titleBg_IniciarJogo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="962824555194898">
+            <conditions>
+                <condition id="17" name="On tap object" sid="263991016489822" type="Touch">
+                    <param id="0" name="Object">TittleGame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="576165390320769" type="TittleGame">
+                    <param id="0" name="Unique ID">591</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="350446375368262" type="System">
+                    <param id="0" name="Variable">jogoIniciado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="188949031654653" type="System">
+                    <param id="0" name="Layout">Tutorial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="522753263027960">
+            <conditions>
+                <condition id="17" name="On tap object" sid="214540762153993" type="Touch">
+                    <param id="0" name="Object">TittleGame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="432868269981055" type="TittleGame">
+                    <param id="0" name="Unique ID">610</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="526192163696094" type="System">
+                    <param id="0" name="Variable">jogoIniciado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="309545757639263" type="System">
+                    <param id="0" name="Layout">Créditos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="610394987772077">
+            <conditions>
+                <condition id="17" name="On tap object" sid="104335738784281" type="Touch">
+                    <param id="0" name="Object">opcoesVOlume</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="483351155662157" type="System">
+                    <param id="0" name="Variable">jogoIniciado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="218410425901835">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="382800514366934" type="System">
+                            <param id="0" name="Layer">&quot;opcoesMainMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="265139675435258" type="System">
+                            <param id="0" name="Layer">&quot;opcoesMainMenu&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665465071025765">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="936590909123484" type="System">
+                            <param id="0" name="Layer">&quot;opcoesMainMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="285503466736763" type="System">
+                            <param id="0" name="Layer">&quot;opcoesMainMenu&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="888322223498322">
+            <conditions>
+                <condition id="2" name="On changed" sid="274807215602485" type="SliderBarVolume" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="3" name="Set value" sid="780528038932287" type="SliderBarVolume">
+                    <param id="0" name="Value">SliderBarVolume.Value - 20</param>
+                </action>
+                <action id="-9" name="Set value" sid="909072125335071" type="System">
+                    <param id="0" name="Variable">VolumeJogo</param>
+                    <param id="1" name="Value">SliderBarVolume.Value - 30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="359115041856134">
+            <conditions>
+                <condition id="1" name="Compare value" sid="625803171042557" type="SliderBarVolume">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set muted" sid="898246961150427" type="Audio">
+                    <param id="0" name="Tag">&quot;musica&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531914076225674">
+            <conditions>
+                <condition id="-22" name="Else" sid="220645020032856" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set muted" sid="142270387171228" type="Audio">
+                    <param id="0" name="Tag">&quot;musica&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="349747229531814">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="771394359882729" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="199286227991836" type="Audio">
+                    <param id="0" name="Tag">&quot;musica&quot;</param>
+                    <param id="1" name="dB">VolumeJogo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="891122807086269">
+            <conditions>
+                <condition id="14" name="On tap" sid="462869540553282" type="Touch" />
+                <condition id="-9" name="Layer is visible" sid="865361067230981" type="System">
+                    <param id="0" name="Layer">&quot;opcoesMainMenu&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="737395016662230">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="124597459523306" type="Touch">
+                            <param id="0" name="Object">OpcoesBG</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="889412473607794" type="Touch">
+                            <param id="0" name="Object">opcoesVOlume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="353103021370328" type="System">
+                            <param id="0" name="Layer">&quot;opcoesMainMenu&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

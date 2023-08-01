@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ev_Islands</name>
+    <events>
+        <event-block sid="840860514890208">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="914846840851553" type="walkableAreaPerson">
+                    <param id="0" name="Instance variable">Existe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="498590952219366" type="System">
+                    <param id="0" name="Layer">&quot;PeopleIsland&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="747177634792028">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="532509904971497" type="walkableAreaPerson">
+                    <param id="0" name="Instance variable">Existe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="574289021324534" type="System">
+                    <param id="0" name="Layer">&quot;PeopleIsland&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="865542258320492">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="303568144913157" type="walkableAreaPet">
+                    <param id="0" name="Instance variable">Existe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="833118251538937" type="System">
+                    <param id="0" name="Layer">&quot;PetIsland&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="852378551419514">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="144434814249149" type="Colision_wall">
+                            <param id="0" name="Unique ID">84</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="382258538643167" type="Colision_wall">
+                            <param id="0" name="X">-66</param>
+                            <param id="1" name="Y">201</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="728622469303429">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="462359380575074" type="walkableAreaPet">
+                    <param id="0" name="Instance variable">Existe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="833320893123027" type="System">
+                    <param id="0" name="Layer">&quot;PetIsland&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="384112357486893">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="760276290067803" type="Colision_wall">
+                            <param id="0" name="Unique ID">84</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="430568109612465" type="Colision_wall">
+                            <param id="0" name="X">527.898</param>
+                            <param id="1" name="Y">304.41</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

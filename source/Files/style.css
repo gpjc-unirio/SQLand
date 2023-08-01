@@ -1,0 +1,83 @@
+#TableDataCreate {
+  color: #000000;
+  border: none;
+}
+
+#TableDataCreate:disabled {
+  color: #a6a4a4;
+}
+
+#CommandSQL {
+  /* opacity: 0.5; */
+  border: 3px solid #000000;
+  font-size: 10px;
+}
+
+/* #CommandSQL:hover {
+  opacity: 1;
+} */
+
+#buttonx {
+  
+  display: inline-block;
+  padding: 2;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: red;
+  font-size: 100%;
+  font-weight: bold;
+  
+}
+
+#buttonx:hover {
+  background-color: #d3d3d3;
+}
+
+#buttonx:active {
+  box-shadow: inset 0px 0px 3px black;
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+
+
+#InsertInput{
+  background-color: #DCDCDC;
+  border:1px solid black;
+  text-align: center;
+  /* line-break: auto; */
+}
+
+#InsertDropDown{
+  background-color: #DCDCDC;
+  border: none;
+
+}
+
+#InsertDropDown:focus-visible{
+  border: none;
+  outline: 0px solid transparent;
+}
+
+#TextBoxQuest {
+  border: none;
+  font-size: 13px;
+  margin: 1px;
+  padding: 1px;
+  text-align: left;
+  font-family:"Calibri";
+  font-weight: bold;
+}
+
+#TextBoxQuest:focus{
+  outline: none;
+}

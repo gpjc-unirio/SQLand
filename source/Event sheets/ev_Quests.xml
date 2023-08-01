@@ -1,0 +1,2636 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ev_Quests</name>
+    <events>
+        <variable constant="0" name="SecsPoint" sid="263811703896309" static="0" type="number">0</variable>
+        <variable constant="0" name="LevelPoints" sid="441355272802495" static="0" type="number">0</variable>
+        <variable constant="0" name="TotalPoints" sid="311609769244546" static="0" type="number">0</variable>
+        <variable constant="0" name="LevelCompleto" sid="523095217228596" static="0" type="number">1</variable>
+        <variable constant="0" name="PetUid1" sid="246883572046688" static="0" type="number">0</variable>
+        <variable constant="0" name="PetUid2" sid="331019341283750" static="0" type="number">0</variable>
+        <variable constant="0" name="Missao6PetTutorId1" sid="447230196176778" static="0" type="number">0</variable>
+        <variable constant="0" name="Missao6PetTutorId2" sid="213066435863121" static="0" type="number">0</variable>
+        <variable constant="0" name="Missao6PetTutorId3" sid="212452783337141" static="0" type="number">0</variable>
+        <variable constant="0" name="PetUid3" sid="490535511516084" static="0" type="number">0</variable>
+        <variable constant="0" name="Primeiro" sid="380065803678592" static="0" type="number">0</variable>
+        <variable constant="0" name="LoopPetst" sid="191917111474960" static="0" type="number">0</variable>
+        <variable constant="0" name="NovosPets" sid="466625870227506" static="0" type="number">0</variable>
+        <variable constant="0" name="UIDmaisNovo" sid="824140098960730" static="0" type="number">0</variable>
+        <variable constant="0" name="QntdCitizensLevel6" sid="775399188610041" static="0" type="number">0</variable>
+        <variable constant="0" name="MenorIdade" sid="290460831605543" static="0" type="number">0</variable>
+        <variable constant="0" name="PrimeiroPet" sid="951128344331372" static="0" type="number">0</variable>
+        <variable constant="0" name="MaisNovaTempTest" sid="873161268778980" static="0" type="number">0</variable>
+        <variable constant="0" name="IdadePrimeiroPet" sid="649138977375419" static="0" type="number">0</variable>
+        <variable constant="0" name="UIDprimeiroPet" sid="107069191570414" static="0" type="number">0</variable>
+        <event-block sid="717289035486934">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="326774090335886" type="System">
+                    <param id="0" name="Variable">DialogOn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="827684935982331" type="System">
+                    <param id="0" name="Variable">LayoutTutorial</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="515187661805451">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="394499683562794" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Set text" sid="202389150342531" type="textBoxQuestion">
+                            <param id="0" name="Text">&quot;Crie uma ilha de Pessoas onde nenhuma pessoa &quot;&amp;newline&amp;&quot;pode ter o mesmo nome, e de forma que possamos organizá-las a partir de algum dado numérico.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="224907236416210" type="textBoxQuest">
+                            <param id="0" name="Text">&quot;Crie uma ilha de Pessoas onde nenhuma pessoa pode ter o mesmo nome, e de forma que possamos organizá-las a partir de mais um dado numérico além de seus IDs.&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="414050910855567">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="237016814223636" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="486243583271982" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="738726864502694">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="363205883983807" type="System">
+                                    <param id="0" name="Variable">TabelaPessoaExiste</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="5" name="Contains value" sid="608274759418027" type="PeopleTable">
+                                    <param id="0" name="Value">&quot;Idade&quot;</param>
+                                </condition>
+                                <condition id="5" name="Contains value" sid="769293315563122" type="PeopleTable">
+                                    <param id="0" name="Value">&quot;unique&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="993847849336853" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="324381514550893" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="907313755616945">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="187897273219655" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Set text" sid="441072712959305" type="textBoxQuestion">
+                            <param id="0" name="Text">&quot;Crie uma ilha de Pets, de forma que possamos organizá-los com algum dado booleano, e lembre que todo animal na ilha deve possuir um nome!&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="489522515759756">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="448435212170301" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="107986278190666" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="918369928600236" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="619023893011736" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="893686787042748" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="537503755591235" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="581789758629647" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="369180614449341" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída com sucesso!!!&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="787206081668802">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="592232373479920" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="805277651571579" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="998155351750718">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="324982697858664" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="948332828742820" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="705060915745780" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="997710299154513">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="600432485155392" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="899072946342264" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="294805512512637" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="364981750643246">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="748648061256461" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="531518286881456" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="563686663409898">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="777542810626867" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="856421360429218">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="651466322590348" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="648285340802712" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Crie uma ilha de Pets, de forma que possamos organizá-los com algum dado booleano, e lembre que todo animal na ilha deve possuir um nome!&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="283631266972763" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="949012392734319" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="532942034795872" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="NomeNotNull" sid="948572720955539" static="0" type="number">0</variable>
+                        <event-block sid="619094664429309">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="510790802167449" type="PetsTable">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="350645476809152">
+                                    <conditions>
+                                        <condition id="4" name="Compare current value" sid="432423954166679" type="PetsTable">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">&quot;Nome&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="204357879214242">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="708094341624723" type="PetsTable">
+                                                    <param id="0" name="X">PetsTable.CurX</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;not null&quot;</param>
+                                                </condition>
+                                                <condition id="1" name="Compare at XY" sid="774530827960332" type="PetsTable">
+                                                    <param id="0" name="X">PetsTable.CurX</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;not null&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="621097091672518" type="System">
+                                                    <param id="0" name="Variable">NomeNotNull</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="932849832063564">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="675972116811669" type="System">
+                                    <param id="0" name="Variable">TabelaPetExiste</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="872913712076223" type="System">
+                                    <param id="0" name="Variable">NomeNotNull</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="5" name="Contains value" sid="272147975446549" type="PetsTable">
+                                    <param id="0" name="Value">&quot;Vacina&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="168160528661752" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="135014068206265" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="937094901240341">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="223526451415338" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="988841884027163">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="352392800988801" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="700304971992658" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="432085718501773" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="171595276378292" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="519531718751405" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="696150291527552" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="866832388449288" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="487246349300347">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="283757924368120" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="288800684801859" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="422482994898756">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="378948869336403" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="385181892005712" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="769589337523481" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="741477226483673">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="768322593989797" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="460383419915067" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="615583472863950" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="705012316780182">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="413273859624312" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="920089031120125" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="601957538578509">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="426669047345830" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="370272628101208">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="833439139765799" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="793661351325682" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Feira de adoção! Traga o cachorro Floquinho para a ilha, e mais 2 pets de sua escolha. Precisamos que eles sejam adotados por tutores diferentes!&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="670103258176296" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="367121733187194" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="118530229152952" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="989250933771189">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="164802601408624" type="Pets" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="517311551765679" type="System">
+                                    <param id="0" name="Seconds">0.0001</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="198376456699704">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="304323091911031" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="570034060728645" type="System">
+                                            <param id="0" name="Variable">Missao6PetTutorId2</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Pets.tutorId</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="356128560656639" type="System">
+                                            <param id="0" name="Variable">Missao6PetTutorId1</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Pets.tutorId</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="776950666399307" type="System">
+                                            <param id="0" name="Variable">PetUid3</param>
+                                            <param id="1" name="Value">Pets.UID</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="811106562359160" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="549363582768484" type="System">
+                                            <param id="0" name="Seconds">0.0001</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="976840236584933" type="System">
+                                            <param id="0" name="Variable">Missao6PetTutorId3</param>
+                                            <param id="1" name="Value">Pets.tutorId</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="463616928143548">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="102694925233598" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="220483568588496" type="System">
+                                            <param id="0" name="Variable">Missao6PetTutorId1</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Pets.tutorId</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="835402350463077" type="System">
+                                            <param id="0" name="Variable">PetUid2</param>
+                                            <param id="1" name="Value">Pets.UID</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="590376245225812" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="644514695869342" type="System">
+                                            <param id="0" name="Seconds">0.0001</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="989822772915657" type="System">
+                                            <param id="0" name="Variable">Missao6PetTutorId2</param>
+                                            <param id="1" name="Value">Pets.tutorId</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="763698943356059">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="636049770031721" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="458829036505684" type="System">
+                                            <param id="0" name="Variable">PetUid1</param>
+                                            <param id="1" name="Value">Pets.UID</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="598516088472066" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="197962149548936" type="System">
+                                            <param id="0" name="Seconds">0.0001</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="215932214057747" type="System">
+                                            <param id="0" name="Variable">Missao6PetTutorId1</param>
+                                            <param id="1" name="Value">Pets.tutorId</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="884142809558834">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="964790386949233" type="Pets">
+                                    <param id="0" name="Unique ID">PetUid3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="716541330697738">
+                                    <conditions>
+                                        <condition id="-19" name="On destroyed" sid="463441582943673" type="Pets" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="343489622452277" type="System">
+                                            <param id="0" name="Variable">PetUid3</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="712656787869682" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="593873228655577">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="693461457007965" type="Pets">
+                                    <param id="0" name="Unique ID">PetUid2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="386380128170303">
+                                    <conditions>
+                                        <condition id="-19" name="On destroyed" sid="156374626283486" type="Pets" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="997408274952313" type="System">
+                                            <param id="0" name="Variable">PetUid2</param>
+                                            <param id="1" name="Value">PetUid3</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="126091931097413" type="System">
+                                            <param id="0" name="Variable">PetUid3</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="311424668067959" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="408482178942405">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="460879262085960" type="Pets">
+                                    <param id="0" name="Unique ID">PetUid1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="108121475748563">
+                                    <conditions>
+                                        <condition id="-19" name="On destroyed" sid="407613238613375" type="Pets" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="689561131246954" type="System">
+                                            <param id="0" name="Variable">PetUid1</param>
+                                            <param id="1" name="Value">PetUid2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="414931459705338" type="System">
+                                            <param id="0" name="Variable">PetUid2</param>
+                                            <param id="1" name="Value">PetUid3</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="199593722288585" type="System">
+                                            <param id="0" name="Variable">PetUid3</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="889816618216276" type="System">
+                                            <param id="0" name="Variable">NovosPets</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="755011179664367">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="226483884121958" type="System">
+                                    <param id="0" name="First value">Missao6PetTutorId1</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Missao6PetTutorId2</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="372067110386462" type="System">
+                                    <param id="0" name="First value">Missao6PetTutorId1</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Missao6PetTutorId3</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="334656627735689" type="System">
+                                    <param id="0" name="First value">Missao6PetTutorId2</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">Missao6PetTutorId3</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="938839758296119" type="System">
+                                    <param id="0" name="Variable">PetUid1</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="862015852932825" type="System">
+                                    <param id="0" name="Variable">PetUid2</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="636342363105789" type="System">
+                                    <param id="0" name="Variable">PetUid3</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="288010164442653">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="787885573443497" type="System">
+                                            <param id="0" name="First value">Pets.Count</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="677755469197299">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="760551001731694" type="System">
+                                                    <param id="0" name="Object">Pets</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="927905446548417">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="922873006286849" type="Pets">
+                                                            <param id="0" name="Instance variable">Name</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Floquinho&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="954946286791511" type="System">
+                                                            <param id="0" name="Variable">LevelCompleto</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="756896479109363">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="681322056221429" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="821076832595415">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="343183052153523" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="943041105757004" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="753425273093602" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="506422351240599" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="575694836496725" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="116255387657671" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="458821783868044" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="324691673575627">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="289455351049169" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="972871192583697" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="501434128032308">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="461811158314882" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="952621138952095" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="822068068414729" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="138615466496744">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="351482621255416" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="772953910205167" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="638095704930247" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="254252921785428">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="228292458852622" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="737791265983929" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="632659902358602">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="723010995020411" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="517059016337961">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="501179949486027" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="808674354330159" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Crie um animal na ilha de Pets com o nome Joãozinho!&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="999565242125753" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="454645880536284" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="530138266229122" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="911106479761856">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="965340699123291" type="System">
+                                    <param id="0" name="First value">Pets.Count</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="645790552843966">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="140404872428207" type="System">
+                                            <param id="0" name="Object">Pets</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block disabled="1" sid="138452626392887">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="270134150660531" type="Pets">
+                                                    <param id="0" name="Instance variable">Name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Joãozinho&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="955810685567112" type="System">
+                                                    <param id="0" name="Variable">LevelCompleto</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="866739670363644">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="817868868829415" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="782707607887811">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="671156725702791" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="334891521798933" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="301212612206170" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="994036204781442" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="475637718745661" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="538904709653316" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída com sucesso!!!&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="732455606676264" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="125980670641809" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="572683544777200">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="250660441751078" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="335081085552462" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="228171318487598">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="697333926619769" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="538467378683953" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="746679502317981" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="326223036835217">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="487376558427209" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="735266106217246" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="623708164886084" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="627661001667194">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="836770179462984" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="961606084532100" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="745849879414189">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="894526567020433" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="605364485917229">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="615330798019176" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="162610938973193" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Traga 5 pessoas para a ilha! Lembre que todas possuem nomes diferentes, 3 chegarão de óculos escuros e ao menos 2 são maiores de 18 anos!&quot; </param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="445648056775529" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="602023682807161" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="890770321352201" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="oculosEscuro" sid="330651278523478" static="0" type="number">0</variable>
+                        <variable constant="0" name="MaiorDe18" sid="112261560299436" static="0" type="number">0</variable>
+                        <event-block sid="979843165212820">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="595788845131297" type="System">
+                                    <param id="0" name="Object">Citizen</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="488036263529661">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="711737420632312" type="Citizen">
+                                            <param id="0" name="Instance variable">Glasses</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Óculos escuros&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="464589810587061" type="System">
+                                            <param id="0" name="Variable">oculosEscuro</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="501788109004134">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="426365948760095" type="Citizen">
+                                            <param id="0" name="Instance variable">Age</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">18</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="576933794233647" type="System">
+                                            <param id="0" name="Variable">MaiorDe18</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="376387027677586">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="510565081610530" type="System">
+                                    <param id="0" name="First value">Citizen.Count</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">4</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="191973944019747" type="System">
+                                    <param id="0" name="Variable">oculosEscuro</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="918275775213280" type="System">
+                                    <param id="0" name="Variable">MaiorDe18</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="5" name="Contains value" sid="637346372520800" type="PeopleTable">
+                                    <param id="0" name="Value">&quot;unique&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="694820984938250" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="867550962701330">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="561990038397018" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="120947294238513">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="344996747288060" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="170642205526699" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="233832006103912" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="594400032373846" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="514610469177066" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="905243479324266" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída com sucesso!!!&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="690723431159436" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="664304455792107" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="423606850233020">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="167300293555276" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="310819857116842" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="451719276393242">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="121612521258496" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="706923328941881" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="905605946806974" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="156286573671741">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="921655305302036" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="776573272445869" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="411323316497134" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="673376325580886">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="546424777023983" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="788079157029369" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="838014386671226">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="180483574597481" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="792066500580429">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="475187321864110" type="System">
+                                    <param id="0" name="Object">Citizen</param>
+                                    <param id="1" name="Expression">Citizen.Age</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="863142461633713" type="System">
+                                    <param id="0" name="Variable">Primeiro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="412899522797074" type="System">
+                                    <param id="0" name="Variable">MaisNovaTempTest</param>
+                                    <param id="1" name="Value">Citizen.Age</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="573455242866104" type="System">
+                                    <param id="0" name="Variable">UIDmaisNovo</param>
+                                    <param id="1" name="Value">Citizen.UID</param>
+                                </action>
+                                <action id="1" name="Append text" sid="358234182652619" type="debugText">
+                                    <param id="0" name="Text">&quot; Uid:&quot;&amp;UIDmaisNovo</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="221924366569953" type="System">
+                                    <param id="0" name="Variable">Primeiro</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="456408916720980" type="System">
+                                    <param id="0" name="Variable">QntdCitizensLevel6</param>
+                                    <param id="1" name="Value">Citizen.Count</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="128548239784605" type="System">
+                                    <param id="0" name="Variable">MenorIdade</param>
+                                    <param id="1" name="Value">Citizen.Age+1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="144781248904448">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="588360859487996" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="636259419872794" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Todas as pessoas com menos de &quot;&amp;MenorIdade&amp;&quot; anos vão sair para viajar! Ajude-os a sair da ilha!&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="174282728894964" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="127503114498006" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="164960295423823" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="382579671389221">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="870730862714295" type="System">
+                                            <param id="0" name="First value">Citizen.Count</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="445696736112457" type="textBoxQuest">
+                                            <param id="0" name="Text">&quot;Todas as pessoas com menos de 18 anos vão sair para viajar! Ajude-os a sair da ilha!&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="737370152336015" type="System">
+                                            <param id="0" name="Variable">MenorIdade</param>
+                                            <param id="1" name="Value">18</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="781172034017261">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="809507640264484" type="Citizen" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="459454537624283" type="System">
+                                    <param id="0" name="Seconds">0.0001</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="931023938538606">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="939061595133894" type="System">
+                                            <param id="0" name="Variable">MenorIdade</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">Citizen.Age</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="581896237859529" type="System">
+                                            <param id="0" name="Variable">UIDmaisNovo</param>
+                                            <param id="1" name="Value">Citizen.UID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="938210308182111" type="System">
+                                            <param id="0" name="Variable">MenorIdade</param>
+                                            <param id="1" name="Value">Citizen.Age</param>
+                                        </action>
+                                        <action id="1" name="Append text" sid="675110882346476" type="debugText">
+                                            <param id="0" name="Text">&quot; Uid:&quot;&amp;UIDmaisNovo&amp;&quot; Menor Idade : &quot;&amp;MenorIdade</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="365660726951598" type="System">
+                                            <param id="0" name="Variable">Primeiro</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="280393478242002" type="System">
+                                            <param id="0" name="Variable">QntdCitizensLevel6</param>
+                                            <param id="1" name="Value">Citizen.Count</param>
+                                        </action>
+                                        <action disabled="1" id="1" name="Append text" sid="700634373961249" type="debugText">
+                                            <param id="0" name="Text">&quot; primeiro:&quot;&amp;Primeiro&amp;&quot; &quot;&amp;QntdCitizensLevel6</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="PessoasComIdadeMenor" sid="465283072901390" static="0" type="number">0</variable>
+                        <event-block sid="926524461706183">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="405176762576817" type="System">
+                                    <param id="0" name="Object">Citizen</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="668817492179767">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="293982806329559" type="Citizen">
+                                            <param id="0" name="Instance variable">Age</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">MenorIdade</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="287069293304446" type="System">
+                                            <param id="0" name="Variable">PessoasComIdadeMenor</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="761211443263967">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="507436045124131" type="Citizen">
+                                    <param id="0" name="Unique ID">UIDmaisNovo</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="652802540447148">
+                                    <conditions>
+                                        <condition id="-19" name="On destroyed" sid="239381425106254" type="Citizen" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="826504532489514" type="System">
+                                            <param id="0" name="Seconds">0.0001</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="634352544812362" type="System">
+                                            <param id="0" name="Variable">LevelCompleto</param>
+                                            <param id="1" name="Value">6</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="670854323318423">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="961643877725311" type="System">
+                                    <param id="0" name="Variable">PessoasComIdadeMenor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="220614985775895" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="221086688370720">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="445760227425723" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="638960301077803">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="379257632858837" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="544550273437148" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="318248194459706" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="965615161782790" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="564290628645730" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="649425472748046" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="358152532444859" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="813300371287953">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="534470996131487" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="615762940405480" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="465181928013402">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="250058941015648" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="173564562128260" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="967544377667867" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="430052539300650">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="272956616903162" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="842232161714503" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="632425924719650" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="816184125989396">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="203017125251473" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="705419726246635" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="496581461038265">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="130962080362058" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="497036300091005">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="404701337674159" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="397122575721490" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;O primeiro pet registrado na ilha está com a idade errada! Adicione 1 ano a mais na sua idade.&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="803713283626202" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="250846933488769" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="116882274295535" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="123621384432731">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="583277629539722" type="Pets" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="541990159231617">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="637207337317347" type="Pets">
+                                            <param id="0" name="Unique ID">UIDprimeiroPet</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="744895788530970" type="debugText">
+                                            <param id="0" name="Text">&quot;dawwa&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="611900344956052" type="System">
+                                            <param id="0" name="Variable">PrimeiroPet</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="558820672701380">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="722707792228308" type="System">
+                                    <param id="0" name="Object">Pets</param>
+                                    <param id="1" name="Expression">Pets.IID</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="812601147869578" type="System">
+                                    <param id="0" name="Variable">PrimeiroPet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="618653378296816" type="System">
+                                    <param id="0" name="Variable">MaisNovaTempTest</param>
+                                    <param id="1" name="Value">Citizen.Age</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="751440175065972" type="System">
+                                    <param id="0" name="Variable">IdadePrimeiroPet</param>
+                                    <param id="1" name="Value">Pets.Age</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="984004486159164" type="System">
+                                    <param id="0" name="Variable">UIDprimeiroPet</param>
+                                    <param id="1" name="Value">Pets.UID</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="115119553761968" type="System">
+                                    <param id="0" name="Variable">PrimeiroPet</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="710580125596240">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="302361208902793" type="Pets">
+                                    <param id="0" name="Unique ID">UIDprimeiroPet</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="948536770025134">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="242424893662495" type="Pets">
+                                            <param id="0" name="Instance variable">Age</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">IdadePrimeiroPet+1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="476146770635321" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="481577789998252" type="System">
+                                            <param id="0" name="Variable">LevelCompleto</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="297737893155642">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="357604134371897" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="571613717618013">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="421881477715763" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="303854936229954" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="880125245443603" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="789864141343934" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="795392360646589" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="948554422364880" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="951011569131050" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="512604089326487">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="339977851386978" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="966330682901405" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="191736221993083">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="577633507548814" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="706668051579550" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="442753025781189" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="396025168260610">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="265138333991788" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="973736290012723" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="558370153350121" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="982602907163723">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="140989248392977" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="183988222630070" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="851787693315848">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="246863186868615" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="809401554911882">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="814409810828798" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="240333942328557" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Dia de vacinação! Vamos vacinar todos os pets que não tiverem sido ainda e garantir que qualquer outro animal a chegar na ilha seja cadastrado com status de vacinação!&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="418403496252174" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="954900231032762" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="290210288508276" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="TodosPetsVacinados" sid="354521279954217" static="0" type="number">0</variable>
+                        <event-block sid="264311918426209">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="474424859108828" type="System">
+                                    <param id="0" name="First value">Pets.Count</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-24" name="For Each (ordered)" sid="492086564927227" type="System">
+                                    <param id="0" name="Object">Pets</param>
+                                    <param id="1" name="Expression">Pets.Id</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="387725166866608">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="829162745041462" type="Pets">
+                                            <param id="0" name="Instance variable">Vax</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Falso&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="753657361705865" type="System">
+                                            <param id="0" name="Variable">TodosPetsVacinados</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="710129223890984">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="143455488140341" type="System">
+                                    <param id="0" name="First value">Pets.Count</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="924898603462636" type="System">
+                                    <param id="0" name="Variable">TodosPetsVacinados</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="5" name="Contains value" sid="764646472994932" type="PetsTable">
+                                    <param id="0" name="Value">&quot;Vacina&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="354476093032628" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="585086965311931">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="882952072047701" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="189178982184378">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="373721377133264" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="111788141779929" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="161140759492484" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="948209220820452" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="354964610765988" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="801162348643591" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="671139179668047" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="291692776420184">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="255421568739060" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="153765804288495" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="937646103550612">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="571229833455310" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="302235119512044" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="666512675041319" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="714966094931350">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="684642524182945" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="528500353651468" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="899616898673611" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="466247474605312">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="124096634911443" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="168384838096385" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="584890626841490">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="948370697640973" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="950951530520579">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="393699855817828" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="195318140397504" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Vamos aproveitar e checar quais são os cachorros na ilha de Pets. Precisamos fazer uma lista com os seus nomes e idades!&quot; </param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="991911346294386" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="521887950453478" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="511356851149469" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="LoopPets" sid="396783084466454" static="0" type="number">0</variable>
+                        <event-block sid="903261556641584">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="908361042000596" type="System">
+                                    <param id="0" name="Object">Pets</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="950381026089896">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="647827232664632" type="Pets">
+                                            <param id="0" name="Instance variable">species</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Cachorro&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set at X" sid="843938605575894" type="Missao8Pets">
+                                            <param id="0" name="X">LoopPetst</param>
+                                            <param id="1" name="Value">Pets.UID</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="542414146180465" type="System">
+                                            <param id="0" name="Variable">LoopPetst</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="596165371544806">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="235890246530144" type="System">
+                                    <param id="0" name="Variable">LoopPetst</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="checkArrayIgual" sid="859272879840156" static="0" type="number">0</variable>
+                        <event-block sid="693565271661293">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="675916640153332" type="Missao8Pets">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                                <condition id="4" name="Compare current value" sid="527072159799625" type="Missao8Pets">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Value">0</param>
+                                </condition>
+                                <condition id="0" name="Compare at X" sid="944693736795252" type="Missao8Pets">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="637838673417300">
+                                    <conditions>
+                                        <condition id="0" name="Compare at X" sid="764985516832734" type="CitizensSelectUids">
+                                            <param id="0" name="X">Missao8Pets.CurX</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Missao8Pets.CurValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="889943406118577" type="System">
+                                            <param id="0" name="Variable">checkArrayIgual</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="221002008682225" type="debugText">
+                                            <param id="0" name="Text">CitizensSelectUids.At(Missao8Pets.CurX)&amp;&quot; &quot;&amp;Missao8Pets.CurValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="676736417900738">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="329910028573654" type="Missao8Pets">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="532607937583048" type="System">
+                                    <param id="0" name="Variable">checkArrayIgual</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="633577516731612">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="466171894710427" type="System">
+                                    <param id="0" name="Variable">checkArrayIgual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="5" name="Contains value" sid="249865747468347" type="SelectedColunas">
+                                    <param id="0" name="Value">&quot;Idade&quot;</param>
+                                </condition>
+                                <condition id="5" name="Contains value" sid="782205211573448" type="SelectedColunas">
+                                    <param id="0" name="Value">&quot;Nome&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="359360916340488" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="755098937085639">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="592915083445203" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="337505998625522">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="451824301470514" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="541025590889933" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="912938689394536" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="739170496430381" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="281168703135672" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="802132774401833" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="454748587552219" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="941681533463142">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="158693551949265" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="810614616799558" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="776509922926902">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="806676241933368" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="802091942170244" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="857964814453262" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="737539776778344">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="982120298674587" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="550687535628109" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="660583599799872" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="629685463857223">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="292995815755235" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="821266253263752" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="830389209040448">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="562383348426158" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="761591253207732">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="182855928869208" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="435937203556342" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;O sistema de cadastro da ilha está em pane! Hoje é dia dos cachorros irem ao veterinário e pessoas com óculos escuros estão precisando comprar novos pares, encontre-os e ajude-os a sair da ilha!&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="231848857171360" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="892119885591912" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="426259698263767" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="362509433465475">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="666858420405408" type="System">
+                                            <param id="0" name="Variable">SQLOpen</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="167613902188753" type="function">
+                                            <param id="0" name="Name">&quot;IndexesSelectTable&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Pessoas&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="cachorrosNaIlha" sid="574745632485179" static="0" type="number">0</variable>
+                        <event-block sid="961498606682595">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="995233455109288" type="System">
+                                    <param id="0" name="Object">Pets</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="758235245480736">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="319489021984366" type="Pets">
+                                            <param id="0" name="Instance variable">species</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Cachorro&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="874224022444718" type="System">
+                                            <param id="0" name="Variable">cachorrosNaIlha</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="pessoasOculosEscuro" sid="130421594541602" static="0" type="number">0</variable>
+                        <event-block sid="356024492785858">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="392206984226073" type="System">
+                                    <param id="0" name="Object">Citizen</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="968094953912578">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="352737352116413" type="Citizen">
+                                            <param id="0" name="Instance variable">Glasses</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Óculos escuros&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="139312245683389" type="System">
+                                            <param id="0" name="Variable">pessoasOculosEscuro</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="558930968331311">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="426223896484869" type="System">
+                                    <param id="0" name="Variable">pessoasOculosEscuro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="479183891427504" type="System">
+                                    <param id="0" name="Variable">cachorrosNaIlha</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="720486457743891" type="System">
+                                    <param id="0" name="Variable">TabelaPessoaExiste</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="740051349169879" type="System">
+                                    <param id="0" name="Variable">TabelaPetExiste</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="877814413571487" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="448085608016545">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="546564967434765" type="System">
+                            <param id="0" name="Variable">LevelCompleto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="368771496800123">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="132467881959190" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="397102039272065" type="exclamationMark">
+                                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="701815486294182" type="closeQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="149972796992988" type="QuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="607572881387337" type="textBoxQuest">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="442182470726537" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="489894746570461" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="265481949555360">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="726009691336020" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="534002202889571" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="381188236612304">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="221459197632567" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">31</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="995645234052591" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="501171715009442" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="331699886479528">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="194770034066515" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">61</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="741845388721089" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="607459671635256" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="362029472060168">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="151134531736003" type="System">
+                                            <param id="0" name="Variable">SecsPoint</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="433434297114556" type="System">
+                                            <param id="0" name="Variable">LevelPoints</param>
+                                            <param id="1" name="Value">LevelPoints+50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="500518015163487">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="225330597329068" type="Pontos">
+                                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="224718214896911">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="506142064007580" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="853824960597381" type="textBoxQuest">
+                                    <param id="0" name="Text">&quot;Uma tsunami está chegando, os habitantes das ilhas precisam abandoná-las! Ajude-os e lembre que você precisa garantir que as ilhas afundaram, para levar a notícia para o continente!&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="119154480763501" type="exclamationMark">
+                                    <param id="0" name="Duration">1</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;MissaoTimer&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="256070805512779" type="nextQuestionBox">
+                                    <param id="0" name="Instance variable">Apertado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="332504595433330" type="nextQuestionBox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="917622986171932">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="659685162545231" type="System">
+                                    <param id="0" name="Variable">TabelaPessoaExiste</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="457018376954519" type="System">
+                                    <param id="0" name="Variable">TabelaPetExiste</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="461520836216226" type="System">
+                                    <param id="0" name="Variable">LevelCompleto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="429414292147112">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="768270551744431" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Timer" id="1" name="Stop timer" sid="166491550758355" type="exclamationMark">
+                                            <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="530065947165751" type="closeQuestionBox">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="779053910195284" type="QuestionBox">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="3" name="Set visible" sid="198015450006863" type="textBoxQuest">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="613341758958093" type="nextQuestionBox">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="495728207336495" type="textBoxQuest">
+                                            <param id="0" name="Text">&quot;Missão concluída!&quot;&amp;newline&amp;newline&amp;&quot;Próxima missão...&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="280197787853097">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="734866059444985" type="System">
+                                                    <param id="0" name="Variable">SecsPoint</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">31</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="818704495259363" type="System">
+                                                    <param id="0" name="Variable">LevelPoints</param>
+                                                    <param id="1" name="Value">LevelPoints+(60-SecsPoint)*8</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="411566224756637">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="919939356720420" type="System">
+                                                    <param id="0" name="Variable">SecsPoint</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">31</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="646909230841210" type="System">
+                                                    <param id="0" name="Variable">SecsPoint</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">61</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="805998692504787" type="System">
+                                                    <param id="0" name="Variable">LevelPoints</param>
+                                                    <param id="1" name="Value">LevelPoints+(60-SecsPoint)*5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="277999440622931">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="777591157055852" type="System">
+                                                    <param id="0" name="Variable">SecsPoint</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">61</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="475160623126479" type="System">
+                                                    <param id="0" name="Variable">SecsPoint</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">180</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="673581643811336" type="System">
+                                                    <param id="0" name="Variable">LevelPoints</param>
+                                                    <param id="1" name="Value">LevelPoints+(150-SecsPoint)*2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="928176615070155">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="115409842103170" type="System">
+                                                    <param id="0" name="Variable">SecsPoint</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">180</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="816218899117061" type="System">
+                                                    <param id="0" name="Variable">LevelPoints</param>
+                                                    <param id="1" name="Value">LevelPoints+50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="923667980122126">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Set text" sid="238752645901386" type="Pontos">
+                                                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;LevelPoints</param>
+                                                </action>
+                                                <action id="-2" name="Go to layout" sid="715548211714375" type="System">
+                                                    <param id="0" name="Layout">Créditos</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="421151102152534">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="260425260094442" type="exclamationMark">
+                    <param id="0" name="Tag">&quot;MissaoTimer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="524077009503953" type="System">
+                    <param id="0" name="Variable">SecsPoint</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164614978356506">
+            <conditions>
+                <condition id="17" name="On tap object" sid="667066218155882" type="Touch">
+                    <param id="0" name="Object">nextQuestionBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="777893195245467" type="nextQuestionBox">
+                    <param id="0" name="Instance variable">Apertado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
