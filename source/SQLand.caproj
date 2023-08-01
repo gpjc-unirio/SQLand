@@ -1,0 +1,2009 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>SQLand</name>
+    <description></description>
+    <version>2.9.3</version>
+    <author>Gabrien Jansen e Renan Madeiro</author>
+    <author-email></author-email>
+    <author-website>https://joccom.uniriotec.br/</author-website>
+    <app-id>br.uniriotec.joccom</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="McKack" id="mck_import" version="1.100000024">Import</plugin>
+        <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Main_Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="tileset">
+            <object-type name="BackGround" sid="453907437940172">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\Construct2 projects\TCC\Tilemaps\Islands_temp.png" />
+                <tiles>
+                    <tile id="18">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                </tiles>
+            </object-type>
+            <object-type name="PplIsland" sid="296960560988050">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\Construct2 projects\TCC\Tilemaps\Islands_temp.png" />
+                <tiles />
+            </object-type>
+            <object-type name="PplIslandObjects" sid="418804068525453">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\Construct2 projects\TCC\Tilemaps\Islands_temp.png" />
+                <tiles />
+            </object-type>
+            <object-type name="PetIsland" sid="524836954695074">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\Construct2 projects\TCC\Tilemaps\Islands_temp.png" />
+                <tiles />
+            </object-type>
+            <object-type name="PetIslandObjects" sid="108420393561663">
+                <plugin id="Tilemap" />
+                <texture original-source="D:\Construct2 projects\TCC\Tilemaps\Islands_temp.png" />
+                <tiles />
+            </object-type>
+        </object-folder>
+        <object-folder name="sprites">
+            <object-folder name="Citizens">
+                <object-type name="Citizen" sid="292811425320882">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="State" sid="459643986885775" type="string" />
+                        <instance-variable name="Name" sid="556166271045317" type="string" />
+                        <instance-variable name="Age" sid="823915636607790" type="number" />
+                        <instance-variable name="Hair" sid="435139974351693" type="string" />
+                        <instance-variable name="Selected" sid="772601449939610" type="boolean" />
+                        <instance-variable name="Id" sid="833272461568550" type="number" />
+                        <instance-variable name="Glasses" sid="662009849503203" type="string" />
+                        <instance-variable name="Gender" sid="591566267345115" type="string" />
+                        <instance-variable name="HairId" sid="425055204246130" type="number" />
+                        <instance-variable name="glassesId" sid="574663819265097" type="number" />
+                        <instance-variable name="PetIds" sid="797658873836729" type="string" />
+                        <instance-variable name="TypeHair" sid="375777003141537" type="string" />
+                        <instance-variable name="CirculoId" sid="458401356491266" type="number" />
+                        <instance-variable name="AgeNull" sid="508873388227349" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pathfinding" sid="308861302289720">
+                            <behavior id="Pathfinding" />
+                        </behavior-type>
+                        <behavior-type name="Timer" sid="920976127068807">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="542736998320986">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                        <behavior-type name="Sine" sid="887168738009065">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="walkingM" pingpong="0" repeatcount="0" repeatto="0" sid="500948421648458" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.871709" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleM" pingpong="0" repeatcount="1" repeatto="0" sid="628811039004497" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingF" pingpong="0" repeatcount="0" repeatto="0" sid="129026162347131" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleF" pingpong="0" repeatcount="1" repeatto="0" sid="553028233503134" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingN" pingpong="0" repeatcount="0" repeatto="0" sid="977233585908096" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.871709" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleN" pingpong="0" repeatcount="1" repeatto="0" sid="787550109818187" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="centro" x="0.5" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.62875" y="0.986842" />
+                                    <point x="0.234375" y="0.983553" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Pets" sid="310976128227285">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="State" sid="886991499383438" type="string" />
+                        <instance-variable name="Name" sid="266987849934593" type="string" />
+                        <instance-variable name="Age" sid="231407504735329" type="number" />
+                        <instance-variable name="Selected" sid="227670095058574" type="boolean" />
+                        <instance-variable name="Id" sid="120952185758534" type="number" />
+                        <instance-variable name="tutorId" sid="381760500200634" type="number" />
+                        <instance-variable name="species" sid="459447083406772" type="string" />
+                        <instance-variable name="Vax" sid="300395941855678" type="string" />
+                        <instance-variable name="AgeNull" sid="739295134705559" type="boolean" />
+                        <instance-variable name="TutorIdNull" sid="505098106676781" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pathfinding" sid="264347882559334">
+                            <behavior id="Pathfinding" />
+                        </behavior-type>
+                        <behavior-type name="Timer" sid="647811828020777">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="936166379376815">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                        <behavior-type name="Sine" sid="705599633017056">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="1" name="cat" pingpong="0" repeatcount="1" repeatto="0" sid="583741969490724" speed="2">
+                            <frame duration="1" hotspotX="0.434783" hotspotY="0.944444">
+                                <collision-poly>
+                                    <point x="0.286522" y="0.853889" />
+                                    <point x="0.585428" y="0.861109" />
+                                    <point x="0.59087" y="0.993787" />
+                                    <point x="0.286522" y="0.993889" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="dog" pingpong="0" repeatcount="1" repeatto="0" sid="370266784197816" speed="5">
+                            <frame duration="1" hotspotX="0.434783" hotspotY="0.95">
+                                <collision-poly>
+                                    <point x="0.286522" y="0.853889" />
+                                    <point x="0.590862" y="0.854165" />
+                                    <point x="0.59087" y="0.993787" />
+                                    <point x="0.286522" y="0.993889" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="slime" pingpong="0" repeatcount="1" repeatto="0" sid="774056278952151" speed="5">
+                            <frame duration="1" hotspotX="0.366667" hotspotY="0.913043">
+                                <collision-poly>
+                                    <point x="0.253" y="0.829469" />
+                                    <point x="0.486328" y="0.829709" />
+                                    <point x="0.486334" y="0.951119" />
+                                    <point x="0.253" y="0.951208" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Customization">
+                <object-type name="shortHair" sid="600942762706900">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="CitizenId" sid="388748624291650" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="121870537220918">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="walkingPreto" pingpong="0" repeatcount="0" repeatto="0" sid="238336466287718" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idlePreto" pingpong="0" repeatcount="1" repeatto="0" sid="405867927571444" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingCastanho" pingpong="0" repeatcount="0" repeatto="0" sid="507878447797509" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleCastanho" pingpong="0" repeatcount="1" repeatto="0" sid="698861829832777" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingLoiro" pingpong="0" repeatcount="0" repeatto="0" sid="914329473231813" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleLoiro" pingpong="0" repeatcount="1" repeatto="0" sid="120262401139524" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingRuivo" pingpong="0" repeatcount="0" repeatto="0" sid="218156557880657" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleRuivo" pingpong="0" repeatcount="1" repeatto="0" sid="336701365961567" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="longHair" sid="165021032122588">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="CitizenId" sid="895162808054005" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="197763436494489">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="walkingPreto" pingpong="0" repeatcount="0" repeatto="0" sid="173957296943837" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idlePreto" pingpong="0" repeatcount="1" repeatto="0" sid="640433017579017" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingCastanho" pingpong="0" repeatcount="0" repeatto="0" sid="690191494716469" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleCastanho" pingpong="0" repeatcount="1" repeatto="0" sid="103805603603896" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingLoiro" pingpong="0" repeatcount="0" repeatto="0" sid="199874087659709" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleLoiro" pingpong="0" repeatcount="1" repeatto="0" sid="170940919050455" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingRuivo" pingpong="0" repeatcount="0" repeatto="0" sid="555910805155574" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleRuivo" pingpong="0" repeatcount="1" repeatto="0" sid="679265694582756" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Glasses" sid="872286700950166">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="601868986028716">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="walkingSunGlasses" pingpong="0" repeatcount="0" repeatto="0" sid="491075439576997" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleSunGlasses" pingpong="0" repeatcount="1" repeatto="0" sid="913943598931304" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="0" name="walkingGlasses" pingpong="0" repeatcount="0" repeatto="0" sid="850768722691273" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="idleGlasses" pingpong="0" repeatcount="1" repeatto="0" sid="789351176467714" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.234376" y="0.87171" />
+                                    <point x="0.628906" y="0.874998" />
+                                    <point x="0.648438" y="0.986842" />
+                                    <point x="0.242188" y="0.986842" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="objects">
+                <object-type name="Colision_wall" sid="340968318621944">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="748585602950185">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="778624713599907" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="walkableAreaPerson" sid="130052286069539">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Existe" sid="268863606163336" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368159035283301" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="walkableAreaPet" sid="871902266775891">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Existe" sid="152606711163017" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392547236751627" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="notSpawn" sid="457159800000913">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859735093356713" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="collision_player" sid="302613457046535">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="441803291012953">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797031089860229" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="Functions">
+            <object-type name="function" sid="463628272108128">
+                <plugin id="Function" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Inputs">
+            <object-type name="Mouse" sid="679530302085180">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Touch" sid="766898090864646">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type global="1" name="Import" sid="532378954264332">
+                <plugin id="mck_import" />
+            </object-type>
+            <object-type name="Keyboard" sid="467210940965559">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Browser" sid="364824267763392">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Audio" sid="654343538389968">
+                <plugin id="Audio" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Buttons">
+            <object-type name="SQL" sid="264940803160421">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="show" sid="603915295489057" type="boolean" />
+                    <instance-variable name="show2" sid="625411200265240" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720231905510711" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gabriel\Desktop\Prototype TCC\images\Logo5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gabriel\Desktop\Prototype TCC\images\Logo10.png">
+                            <collision-poly>
+                                <point x="0.0833333" y="0.0833333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.916667" y="0.0833333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.888889" y="0.888889" />
+                                <point x="0.5" y="1" />
+                                <point x="0.111111" y="0.888889" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2 projects\Logo11.png">
+                            <collision-poly>
+                                <point x="0.0833333" y="0.0833333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.916667" y="0.0833333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.944444" y="0.944444" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0555556" y="0.944444" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2 projects\Logo12.png">
+                            <collision-poly>
+                                <point x="0.0833333" y="0.0833333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.916667" y="0.0833333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.888889" y="0.888889" />
+                                <point x="0.5" y="1" />
+                                <point x="0.111111" y="0.888889" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2 projects\Logo13.png">
+                            <collision-poly>
+                                <point x="0.0833333" y="0.0833333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.916667" y="0.0833333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.944444" y="0.944444" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0555556" y="0.944444" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Options" sid="595230015205793">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="open" sid="988503369804932" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="300755899106414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.472376" original-source="D:\Construct2 projects\TCC\Sprites\2db4aab3ad99884.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="UI">
+            <object-folder name="Create">
+                <object-type name="CreateForm" sid="350851687756030">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="514012202721187" speed="5">
+                            <frame duration="1" hotspotX="0.500747" hotspotY="0.502203" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CreateIndex" sid="460317753806878">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="CreateNameData1" sid="366912787816249">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="851810358146136" type="string" />
+                        <instance-variable name="FirstInsertion" sid="466377478113808" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CreateNameData2" sid="844622770818853">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="923650610508251" type="string" />
+                        <instance-variable name="FirstInsertion" sid="540212337226267" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CreateNameData3" sid="664330995221403">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="965304659001873" type="string" />
+                        <instance-variable name="FirstInsertion" sid="928227218420937" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CreateNameData4" sid="773858329512562">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="667898521952390" type="string" />
+                        <instance-variable name="FirstInsertion" sid="430297149000194" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CreateNameData5" sid="346464692169340">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="369599989979915" type="string" />
+                        <instance-variable name="FirstInsertion" sid="680799003984074" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CreateNameData6" sid="635767199083184">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="536700132749562" type="string" />
+                        <instance-variable name="FirstInsertion" sid="831601909780934" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="CreateTipoData1" sid="966854392569928">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateTipoData2" sid="472062826983005">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateTipoData3" sid="992059923212978">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateTipoData4" sid="467023697474337">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateTipoData5" sid="574683059753613">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateTipoData6" sid="403073406416545">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint1Data1" sid="697315746992805">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint1Data2" sid="742467124755142">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint1Data3" sid="410474464208358">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint1Data4" sid="125817297043091">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint1Data5" sid="882640255088896">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint1Data6" sid="921840999738055">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint2Data1" sid="799293603033881">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint2Data2" sid="625989381342617">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint2Data3" sid="435798427832141">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint2Data4" sid="882176950511780">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint2Data5" sid="111013707712432">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="CreateConstraint2Data6" sid="238975250926379">
+                    <plugin id="List" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Main">
+                <object-type name="AlterBox" sid="379575770571876">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558571258869724" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AlterText" sid="653032397682729">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="CreateBox" sid="411143662166031">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818677111985765" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CreateText" sid="623888769189399">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="DeleteBox" sid="321823783404108">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298709730025354" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DeleteText" sid="897152369128344">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="DropBox" sid="111795060026562">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="441038311888268" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DropText" sid="418756566431452">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InsertBox" sid="956312279482986">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660569344330693" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InsertText" sid="434543736433328">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="NameTable" sid="918702750069624">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="SelectBox" sid="328431229648809">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="100060634770250" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SelectText" sid="872161044066316">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="SQLFormBox" sid="964774728756737">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="140273186200364" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TableSelect" sid="104901704150866">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="TitleSql" sid="815248354866268">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="UpdateBox" sid="782264090352250">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="996249298105066" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UpdateText" sid="321646448965884">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InstructionDB" sid="576329067393096">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327654567684905" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TextCommandSQL" sid="165101244217909">
+                    <plugin id="TextBox" />
+                </object-type>
+                <object-type name="ClearLine" sid="928865795851764">
+                    <plugin id="Button" />
+                    <instance-variables>
+                        <instance-variable name="Line" sid="639368970355082" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="Execute" sid="402789494373057">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Clickavel" sid="602738247274299" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373637036057022" speed="0">
+                            <frame duration="1" hotspotX="0.51" hotspotY="0.516129" original-source="D:\Construct2 projects\TCC\Sprites\Execute.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="D:\Construct2 projects\TCC\Sprites\Execute_clicked.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ErrorBox" sid="793774004794885">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="8Direction" sid="429839977561628">
+                            <behavior id="EightDir" />
+                        </behavior-type>
+                        <behavior-type name="Timer" sid="763279650856944">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="223292693268803" speed="0">
+                            <frame duration="1" hotspotX="0.502242" hotspotY="0.505882" />
+                            <frame duration="1" hotspotX="0.502242" hotspotY="0.505882" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="PopupTitle" sid="101676146556213">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="716408292139247">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="ErrorText" sid="643391944264387">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="443699928840755">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="fullscreenButton" sid="500148459710996">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Fullscreen" sid="897727076023209" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="911215173840963" speed="5">
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                            <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="versão" sid="732319298520312">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="TabelaInserts" sid="592873291057482">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Pessoas" pingpong="0" repeatcount="1" repeatto="0" sid="274828267680272" speed="5">
+                            <frame duration="1" hotspotX="0.501279" hotspotY="0.546219" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Pets" pingpong="0" repeatcount="1" repeatto="0" sid="655908450838907" speed="5">
+                            <frame duration="1" hotspotX="0.501279" hotspotY="0.543175" original-source="C:\Users\Gabriel\Pictures\janelaBanco.png">
+                                <collision-poly>
+                                    <point x="0.00255754" y="0.00278552" />
+                                    <point x="0.997442" y="0.00278552" />
+                                    <point x="0.994885" y="1" />
+                                    <point x="0.00511509" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="IndexSelectTabela" sid="822619744107011">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="dataTabelaSelect" sid="742342338683509">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="glossario" sid="816409097476222">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Open" sid="459685691392963" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549297658463355" speed="5">
+                            <frame duration="1" hotspotX="0.527778" hotspotY="0.5" original-source="D:\Construct2 projects\glossario.png">
+                                <collision-poly>
+                                    <point x="0.111111" y="0.0277778" />
+                                    <point x="0.916667" y="0.0277778" />
+                                    <point x="0.916667" y="0.972222" />
+                                    <point x="0.111111" y="0.972222" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FpsViewer" sid="584082238463631">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="exclamationMark" sid="670649356153553">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Timer" sid="475383995708089">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198993067000389" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bielj\Downloads\pngwing.com.png">
+                                <collision-poly>
+                                    <point x="0.181641" y="0.181641" />
+                                    <point x="0.5" y="0.0957031" />
+                                    <point x="0.818359" y="0.181641" />
+                                    <point x="0.998047" y="0.5" />
+                                    <point x="0.785156" y="0.785156" />
+                                    <point x="0.5" y="0.853516" />
+                                    <point x="0.105469" y="0.894531" />
+                                    <point x="0.00195313" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="QuestionBox" sid="388829156508832">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641424041331512" speed="5">
+                            <frame duration="1" hotspotX="0.502762" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="closeQuestionBox" sid="856386225136819">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333632098033040" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="textBoxQuestion" sid="445146698492078">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="TableSelectCreate" sid="510720663481183">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="textBoxQuest" sid="475167693523181">
+                    <plugin id="TextBox" />
+                </object-type>
+                <object-type name="SkipTutorial" sid="842069492439730">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="nextQuestionBox" sid="474624226692487">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Apertado" sid="467167626029338" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144533532835927" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Pontos" sid="593136272042940">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Drop">
+                <object-type name="dropForm" sid="292353073265601">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379038422195121" speed="5">
+                            <frame duration="1" hotspotX="0.500747" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="dropList" sid="325850414426584">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="DropFormTable" sid="672797460205387">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="657370037112405" speed="5">
+                            <frame duration="1" hotspotX="0.478571" hotspotY="0.502203">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.955714" y="0" />
+                                    <point x="0.955714" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DropIndex" sid="963605253667195">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Alter">
+                <object-type name="alterForm" sid="502708719221561">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="708835306739359" speed="5">
+                            <frame duration="1" hotspotX="0.500747" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AlterNameData1" sid="510907657145391">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="734477094008041" type="string" />
+                        <instance-variable name="FirstInsertion" sid="513804265087821" type="boolean" />
+                        <instance-variable name="Disabled" sid="906161731147135" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterNameData2" sid="121446247062871">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="810168785080638" type="string" />
+                        <instance-variable name="FirstInsertion" sid="460776624917469" type="boolean" />
+                        <instance-variable name="Disabled" sid="736622055237101" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterNameData3" sid="303537192962580">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="538639651634169" type="string" />
+                        <instance-variable name="FirstInsertion" sid="772595270092911" type="boolean" />
+                        <instance-variable name="Disabled" sid="887223942792219" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterNameData4" sid="888870994679877">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="450908007357071" type="string" />
+                        <instance-variable name="FirstInsertion" sid="640340208603888" type="boolean" />
+                        <instance-variable name="Disabled" sid="268776942795933" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterNameData5" sid="552257128528474">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="661698737286600" type="string" />
+                        <instance-variable name="FirstInsertion" sid="363658659270174" type="boolean" />
+                        <instance-variable name="Disabled" sid="105774792519523" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterFormAdd" sid="402924903945380">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961753074153424" speed="5">
+                            <frame duration="1" hotspotX="0.478571" hotspotY="0.502203">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.955714" y="0" />
+                                    <point x="0.955714" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="alterAddDrop" sid="106498152945391">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="634377456561524" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="addColumn" sid="117523863625749">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="ativado" sid="830259089805771" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="dropColumn" sid="754341902495797">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="ativado" sid="113996492489830" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterNameDataPK" sid="977185826981292">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="686182063324763" type="string" />
+                        <instance-variable name="FirstInsertion" sid="849048586596451" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterTipoData1" sid="713314174406070">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="334749637839567" type="string" />
+                        <instance-variable name="FirstInsertion" sid="902467272767397" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterTipoData2" sid="251206722657248">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="581232093384620" type="string" />
+                        <instance-variable name="FirstInsertion" sid="928997181402174" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterTipoData3" sid="271562284922426">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="487428011950666" type="string" />
+                        <instance-variable name="FirstInsertion" sid="830332554509943" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterTipoData4" sid="857697183587653">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="882985933855790" type="string" />
+                        <instance-variable name="FirstInsertion" sid="628361556860319" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterTipoData5" sid="295318313159134">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="151824092949498" type="string" />
+                        <instance-variable name="FirstInsertion" sid="623840027227086" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterTipoPK" sid="761243859245087">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="958163954892956" type="string" />
+                        <instance-variable name="FirstInsertion" sid="979265079763504" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint1Data1" sid="301581622114862">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="900096590921388" type="string" />
+                        <instance-variable name="FirstInsertion" sid="411319597451802" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint1Data2" sid="647861043378267">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="975536896937285" type="string" />
+                        <instance-variable name="FirstInsertion" sid="147769382436081" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint1Data3" sid="635898014300294">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="202425969045793" type="string" />
+                        <instance-variable name="FirstInsertion" sid="620851087230299" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint1Data4" sid="922546604805536">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="824457141367170" type="string" />
+                        <instance-variable name="FirstInsertion" sid="627406112628825" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint1Data5" sid="521763769664366">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="314553864379771" type="string" />
+                        <instance-variable name="FirstInsertion" sid="422090719332045" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint1DataPK" sid="435402419055901">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="792659860241601" type="string" />
+                        <instance-variable name="FirstInsertion" sid="954246064649411" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint2Data1" sid="201454412174046">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="454324701633598" type="string" />
+                        <instance-variable name="FirstInsertion" sid="464014911799192" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint2Data2" sid="482849751311593">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="164632355234143" type="string" />
+                        <instance-variable name="FirstInsertion" sid="884923144491318" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint2Data3" sid="737664112316033">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="578059314463607" type="string" />
+                        <instance-variable name="FirstInsertion" sid="133577395052832" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint2Data4" sid="603612880631605">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="363546126009328" type="string" />
+                        <instance-variable name="FirstInsertion" sid="605981190235297" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint2Data5" sid="291976373790413">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="904781575134416" type="string" />
+                        <instance-variable name="FirstInsertion" sid="950826038104421" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterConstraint2DataPK" sid="458345604776665">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="LastSelectedItem" sid="406865723694216" type="string" />
+                        <instance-variable name="FirstInsertion" sid="808291520445562" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="AlterIndex" sid="800883634773329">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="ClearLineAlter1" sid="345371085376603">
+                    <plugin id="Button" />
+                    <instance-variables>
+                        <instance-variable name="Activate" sid="392166154007149" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="ClearLineAlter2" sid="720415526042455">
+                    <plugin id="Button" />
+                    <instance-variables>
+                        <instance-variable name="Activate" sid="251858219097557" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="ClearLineAlter3" sid="150666315257777">
+                    <plugin id="Button" />
+                    <instance-variables>
+                        <instance-variable name="Activate" sid="589149362650554" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="ClearLineAlter4" sid="413663320669084">
+                    <plugin id="Button" />
+                    <instance-variables>
+                        <instance-variable name="Activate" sid="537035281654147" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="ClearLineAlter5" sid="128527424127481">
+                    <plugin id="Button" />
+                    <instance-variables>
+                        <instance-variable name="Activate" sid="352864394475812" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="lineDeleteAlter" sid="194978802596491">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367403651740140" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Insert">
+                <object-type name="blankSpace" sid="442766527516767">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436942883675339" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OptionInsert1" sid="675439228251649">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="594558834965086" speed="5">
+                            <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OptionInsert2" sid="825184735792499">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939751371161699" speed="5">
+                            <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OptionInsert3" sid="971031969786648">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="823699954986279" speed="5">
+                            <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OptionInsert4" sid="207451003666177">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741341776788021" speed="5">
+                            <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="OptionInsert5" sid="748814898847503">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="434208788258617" speed="5">
+                            <frame duration="1" hotspotX="0.496296" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InsertIndex1" sid="146483451062966">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InsertIndex2" sid="669241013055390">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InsertIndex3" sid="431080663056089">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InsertIndex4" sid="171765630737957">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InsertIndex5" sid="984097077074298">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="inputInsert1" sid="492091172660098">
+                    <plugin id="TextBox" />
+                </object-type>
+                <object-type name="inputInsert2" sid="649780765759352">
+                    <plugin id="TextBox" />
+                </object-type>
+                <object-type name="inputInsert3" sid="195559959340906">
+                    <plugin id="TextBox" />
+                </object-type>
+                <object-type name="dropdownInsert1" sid="982807647605306">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="dropdownInsert2" sid="736275795705984">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="dropdownInsert3" sid="434404644508176">
+                    <plugin id="List" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Update">
+                <object-type name="Set" sid="964368421412695">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="updateSetColumn" sid="237486554184318">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="updatesetTextBox" sid="775103936512767">
+                    <plugin id="TextBox" />
+                    <instance-variables>
+                        <instance-variable name="visivel" sid="116837606687816" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="updateWhereColumn" sid="128862426676139">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="updatewhereLogicalComparator" sid="600026139476897">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="updateWhereTextBox" sid="774653454764429">
+                    <plugin id="TextBox" />
+                    <instance-variables>
+                        <instance-variable name="visivel" sid="797537242574911" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="blankSpace2" sid="605476008691512">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="110461593182238" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="updateSetColumnOption" sid="831154999859261">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="visivel" sid="440830413489248" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="updateWhereColumnOption" sid="746506091023807">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="visivel" sid="816515020706183" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="optionUpdate" sid="368955780516560">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="461397520363158" speed="5">
+                            <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Delete">
+                <object-type name="blankSpace3" sid="388505356775830">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737640105572636" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Set2" sid="273928795419845">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="deleteWhereColumn" sid="784599653164763">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="deleteWhereLogicalComparator" sid="813766188077577">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="deleteWhereTextBox" sid="932081299993661">
+                    <plugin id="TextBox" />
+                    <instance-variables>
+                        <instance-variable name="visible" sid="865837786474136" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="deleteWhereListOptions" sid="311861297125944">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="visible" sid="314442144732078" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="OptionInsert6" sid="443496065194566">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689454501627288" speed="5">
+                            <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Select">
+                <object-type name="indexSelect" sid="674946408245704">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="colunasSelect" sid="832763334761913">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="whereSelect" sid="696422804462211">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="comparadorSelect" sid="395956597611338">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="valorSelect" sid="106600450800086">
+                    <plugin id="TextBox" />
+                    <instance-variables>
+                        <instance-variable name="visivel" sid="855764727754176" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="valorDropSelect" sid="422748948653065">
+                    <plugin id="List" />
+                    <instance-variables>
+                        <instance-variable name="visivel" sid="917554960699685" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="OptionSelect2" sid="933044307165662">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166686739978700" speed="5">
+                            <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Glossario">
+                <object-type name="glossarioBG" sid="153091650247561">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Pagina" sid="764367147236380" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233209197433243" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500978" original-source="D:\Construct2 projects\GlossarioUI.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="glossarioClose" sid="235956801725955">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601122026801092" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AnterPag" sid="419406658118347">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161967512536701" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ProxPag" sid="811429642599384">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="850733329386264" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TitleGlossario" sid="981262465696286">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="TitleGlossario2" sid="685285846455291">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="TextoEsqGlossario" sid="233115386530816">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="TextoDirGlossario" sid="570871595264979">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Options">
+                <object-type name="OpcoesBG" sid="940205741649460">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867793364799674" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TextOptions" sid="150435210102973">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="SliderBarVolume" sid="559191253584813">
+                    <plugin id="sliderbar" />
+                </object-type>
+                <object-type name="ButtonMainMenu" sid="493457394117388">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211420171747626" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TextMainMenu" sid="608717173116330">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="Alert" sid="269258385162443" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type name="TitleAlert" sid="668267635315019">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="OpcoesMainMenu" sid="488330348825248">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="AlertMainMenu" sid="172611350712926">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162087146810202" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SliderBarVolumeGame" sid="350298644817568">
+                    <plugin id="sliderbar" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="CreateBox" />
+        <object-folder name="Arrays">
+            <object-type global="1" name="People" sid="965957203879617">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="PetsOptions" sid="505520389588573">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="PeopleOptions" sid="342469555867379">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="PeopleTable" sid="764183007174544">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="PetsTable" sid="217870870107591">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="CitizensDeleteUids" sid="226366041604017">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="CitizensUpdateUids" sid="991860288067485">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="CitizensSelectUids" sid="382175036220992">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="SelectedColunas" sid="356156812581862">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="MensagensCommandAlter" sid="337078857649537">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Missao8Pets" sid="788017052988613">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="ArrayTest" sid="942332331652961">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Dialog">
+            <object-type name="DialogBox" sid="749842711152378">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="476438030175135">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="143761524097274" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DialogText" sid="371333644817470">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="mostrar" sid="106137687811806" type="boolean" />
+                    <instance-variable name="Dialog" sid="820237334523978" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="451255289358950">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="DialogOk" sid="359567177688121">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="530697496153648">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930152705765420" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.52" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tutorialCirculando" sid="311316375176538">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PessoaId" sid="355009084447488" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="975006524726763">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303285386185142" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="20" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="circulandoIlha" sid="492339209426033">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811798809713733" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="10" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="circulandoInstrucao" sid="139678490476226">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869990404510257" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="10" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HandPointing" sid="388273586297217">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="599096638025639">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="500315507438211" speed="5">
+                        <frame duration="1" hotspotX="0.25" hotspotY="0.388889">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PularTutorialButtonSprite" sid="437930037331268">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688505374987774" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="MainMenu">
+            <object-type name="bg" sid="317651987664925">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="302024174875030" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct2 projects\TCC\Sprites\backgroundMainMenu.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TittleGame" sid="279511039785776">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="titleBg" sid="340731795517435">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="459532156929703" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="versaoJogo" sid="893959678831736">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="opcoesVOlume" sid="492383117546574">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="objetoIniciarJogo" sid="471043331830930">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-type name="debugText" sid="788913724883099">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Créditos" sid="530434965096708">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="IniciarJogow" sid="858979463186765">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="titleBg_IniciarJogo" sid="160273281791500">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875590655713185" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ren\Desktop\Teste.png">
+                        <collision-poly>
+                            <point x="0.00555556" y="0.0125" />
+                            <point x="0.994444" y="0.0125" />
+                            <point x="0.994444" y="0.9875" />
+                            <point x="0.00555556" y="0.9875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="754631661448539">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211538976123667" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ren\Desktop\Teste.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TittleGame_SQLGame" sid="399866316239175">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="titleBg_SQLGame" sid="504362502266224">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652662459156860" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ren\Desktop\Teste.png">
+                        <collision-poly>
+                            <point x="0.00555556" y="0.0125" />
+                            <point x="0.994444" y="0.0125" />
+                            <point x="0.994444" y="0.9875" />
+                            <point x="0.00555556" y="0.9875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Tutorial.xml</layout>
+        <layout>Main_Game.xml</layout>
+        <layout>Main_Menu.xml</layout>
+        <layout>Créditos.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>ev_MainGame.xml</event-sheet>
+        <event-sheet>ev_NPCs.xml</event-sheet>
+        <event-sheet>ev_UI.xml</event-sheet>
+        <event-sheet>ev_Islands.xml</event-sheet>
+        <event-sheet>ev_DialogTutorial.xml</event-sheet>
+        <event-sheet>ev_Quests.xml</event-sheet>
+        <event-sheet>ev_Glossary.xml</event-sheet>
+        <event-sheet>ev_MainMenu.xml</event-sheet>
+        <event-sheet>ev_Creditos.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="function" uid="12" />
+        <global-instance type="Mouse" uid="15" />
+        <global-instance type="Touch" uid="16">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="69" />
+        <global-instance type="Browser" uid="144" />
+        <global-instance type="Audio" uid="618">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="DavidKBD_-_Tropical_Pack_-_09_-_Ukuleles_Melancholy_-_Acoustic.ogg" />
+        <file name="DavidKBD_-_Tropical_Pack_-_05_-_Tropical_Chill_-_Reggae.ogg" />
+        <file name="DavidKBD_-_Tropical_Pack_-_08_-_Tropical_Mystery_-_Reggae.ogg" />
+        <file name="DavidKBD_-_Tropical_Pack_-_12_-_Summer_Party_-_Calypso.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+            <file name="PalmLogo4.png" />
+        </file-folder>
+        <file name="style.css" />
+    </files-folder>
+</c2project>
